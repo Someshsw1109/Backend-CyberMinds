@@ -10,7 +10,7 @@ const app = express();
 
 // CORS configuration to allow frontend (on port 5173) to connect
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', 'https://cyber-mind-assignments.vercel.app/'],
   credentials: true,
 }));
 
