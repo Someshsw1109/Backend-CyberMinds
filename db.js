@@ -16,10 +16,10 @@ const dbConfig ={
   database: process.env.PG_NAME || 'db',
   password: process.env.PG_PASSWORD, // Reads from .env
   port: parseInt(process.env.PG_PORT || '5432', 10),
+  ssl: {
+    rejectUnauthorized: false, // ← required for Render SSL
+  },
 };
-ssl: {
-  rejectUnauthorized: false, // ← required for Render SSL
-},
 
 // Optional connection test
 // --- Input Validation (Basic) ---
